@@ -20,7 +20,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         // players = foodItemService.getAllFoodItemsByCategory(category:category!)
         tableViewInitiative.dataSource = self
         tableViewInitiative.delegate = self
-        tableViewInitiative.rowHeight = 125
+        tableViewInitiative.rowHeight = 120
         
         // Do any additional setup after loading the view.
     }
