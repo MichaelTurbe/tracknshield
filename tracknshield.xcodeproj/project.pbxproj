@@ -12,6 +12,10 @@
 		AEDFEA61203E7899009A48B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA5F203E7899009A48B8 /* Main.storyboard */; };
 		AEDFEA63203E7899009A48B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA62203E7899009A48B8 /* Assets.xcassets */; };
 		AEDFEA66203E7899009A48B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA64203E7899009A48B8 /* LaunchScreen.storyboard */; };
+		AEDFEA7320436556009A48B8 /* PlayerTrackerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7120436556009A48B8 /* PlayerTrackerTableViewCell.swift */; };
+		AEDFEA7420436556009A48B8 /* PlayerTrackerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA7220436556009A48B8 /* PlayerTrackerTableViewCell.xib */; };
+		AEDFEA7820438BF6009A48B8 /* InitiativeTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7720438BF6009A48B8 /* InitiativeTrackerViewController.swift */; };
+		AEDFEA7A20438E78009A48B8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7920438E78009A48B8 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		AEDFEA62203E7899009A48B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEDFEA65203E7899009A48B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEDFEA67203E7899009A48B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEDFEA7120436556009A48B8 /* PlayerTrackerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackerTableViewCell.swift; sourceTree = "<group>"; };
+		AEDFEA7220436556009A48B8 /* PlayerTrackerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTrackerTableViewCell.xib; sourceTree = "<group>"; };
+		AEDFEA7720438BF6009A48B8 /* InitiativeTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitiativeTrackerViewController.swift; sourceTree = "<group>"; };
+		AEDFEA7920438E78009A48B8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,7 @@
 		AEDFEA4F203E7899009A48B8 = {
 			isa = PBXGroup;
 			children = (
+				AEDFEA6D20436159009A48B8 /* tracknshieldCore */,
 				AEDFEA5A203E7899009A48B8 /* tracknshield */,
 				AEDFEA59203E7899009A48B8 /* Products */,
 			);
@@ -54,14 +63,65 @@
 		AEDFEA5A203E7899009A48B8 /* tracknshield */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFEA70204361AA009A48B8 /* CustomCells */,
+				AEDFEA6F204361A3009A48B8 /* Storyboards */,
+				AEDFEA6E20436194009A48B8 /* ViewControllers */,
 				AEDFEA5B203E7899009A48B8 /* AppDelegate.swift */,
 				AEDFEA5D203E7899009A48B8 /* ViewController.swift */,
-				AEDFEA5F203E7899009A48B8 /* Main.storyboard */,
 				AEDFEA62203E7899009A48B8 /* Assets.xcassets */,
 				AEDFEA64203E7899009A48B8 /* LaunchScreen.storyboard */,
 				AEDFEA67203E7899009A48B8 /* Info.plist */,
 			);
 			path = tracknshield;
+			sourceTree = "<group>";
+		};
+		AEDFEA6D20436159009A48B8 /* tracknshieldCore */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFEA76204386A7009A48B8 /* services */,
+				AEDFEA75204386A0009A48B8 /* models */,
+			);
+			path = tracknshieldCore;
+			sourceTree = "<group>";
+		};
+		AEDFEA6E20436194009A48B8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFEA7720438BF6009A48B8 /* InitiativeTrackerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AEDFEA6F204361A3009A48B8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFEA5F203E7899009A48B8 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AEDFEA70204361AA009A48B8 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFEA7120436556009A48B8 /* PlayerTrackerTableViewCell.swift */,
+				AEDFEA7220436556009A48B8 /* PlayerTrackerTableViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		AEDFEA75204386A0009A48B8 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				AEDFEA7920438E78009A48B8 /* Player.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		AEDFEA76204386A7009A48B8 /* services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +186,7 @@
 				AEDFEA66203E7899009A48B8 /* LaunchScreen.storyboard in Resources */,
 				AEDFEA63203E7899009A48B8 /* Assets.xcassets in Resources */,
 				AEDFEA61203E7899009A48B8 /* Main.storyboard in Resources */,
+				AEDFEA7420436556009A48B8 /* PlayerTrackerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEDFEA5E203E7899009A48B8 /* ViewController.swift in Sources */,
+				AEDFEA7320436556009A48B8 /* PlayerTrackerTableViewCell.swift in Sources */,
+				AEDFEA7820438BF6009A48B8 /* InitiativeTrackerViewController.swift in Sources */,
+				AEDFEA7A20438E78009A48B8 /* Player.swift in Sources */,
 				AEDFEA5C203E7899009A48B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPVD875RBX;
 				INFOPLIST_FILE = tracknshield/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mindfuleye.software.tracknshield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FPVD875RBX;
 				INFOPLIST_FILE = tracknshield/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mindfuleye.software.tracknshield;
 				PRODUCT_NAME = "$(TARGET_NAME)";
