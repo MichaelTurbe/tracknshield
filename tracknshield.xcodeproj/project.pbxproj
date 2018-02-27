@@ -16,6 +16,9 @@
 		AEDFEA7420436556009A48B8 /* PlayerTrackerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA7220436556009A48B8 /* PlayerTrackerTableViewCell.xib */; };
 		AEDFEA7820438BF6009A48B8 /* InitiativeTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7720438BF6009A48B8 /* InitiativeTrackerViewController.swift */; };
 		AEDFEA7A20438E78009A48B8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7920438E78009A48B8 /* Player.swift */; };
+		AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */; };
+		AEDFEA802044F79E009A48B8 /* InMemoryPlayerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7F2044F79E009A48B8 /* InMemoryPlayerRepository.swift */; };
+		AEDFEA822044F953009A48B8 /* PlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA812044F953009A48B8 /* PlayersService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		AEDFEA7220436556009A48B8 /* PlayerTrackerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTrackerTableViewCell.xib; sourceTree = "<group>"; };
 		AEDFEA7720438BF6009A48B8 /* InitiativeTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitiativeTrackerViewController.swift; sourceTree = "<group>"; };
 		AEDFEA7920438E78009A48B8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRepositoryProtocol.swift; sourceTree = "<group>"; };
+		AEDFEA7F2044F79E009A48B8 /* InMemoryPlayerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryPlayerRepository.swift; sourceTree = "<group>"; };
+		AEDFEA812044F953009A48B8 /* PlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 		AEDFEA76204386A7009A48B8 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFEA812044F953009A48B8 /* PlayersService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 		AEDFEA7B2043C27E009A48B8 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 		AEDFEA7C2043C297009A48B8 /* data access */ = {
 			isa = PBXGroup;
 			children = (
+				AEDFEA7F2044F79E009A48B8 /* InMemoryPlayerRepository.swift */,
 			);
 			path = "data access";
 			sourceTree = "<group>";
@@ -213,8 +222,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEDFEA822044F953009A48B8 /* PlayersService.swift in Sources */,
 				AEDFEA5E203E7899009A48B8 /* ViewController.swift in Sources */,
+				AEDFEA802044F79E009A48B8 /* InMemoryPlayerRepository.swift in Sources */,
 				AEDFEA7320436556009A48B8 /* PlayerTrackerTableViewCell.swift in Sources */,
+				AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */,
 				AEDFEA7820438BF6009A48B8 /* InitiativeTrackerViewController.swift in Sources */,
 				AEDFEA7A20438E78009A48B8 /* Player.swift in Sources */,
 				AEDFEA5C203E7899009A48B8 /* AppDelegate.swift in Sources */,

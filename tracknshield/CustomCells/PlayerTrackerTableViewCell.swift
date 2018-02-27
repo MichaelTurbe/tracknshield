@@ -9,7 +9,13 @@
 import UIKit
 
 class PlayerTrackerTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var labelHP: UILabel!
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var viewHP: UIView!
+    @IBOutlet weak var viewAC: UIView!
+    @IBOutlet weak var viewPassivePerception: UIView!
+    
+    @IBOutlet weak var viewSpellSaveDC: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

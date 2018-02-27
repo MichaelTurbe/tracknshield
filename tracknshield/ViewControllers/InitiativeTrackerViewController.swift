@@ -13,6 +13,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     var players: [Player] = [Player]()
     @IBOutlet weak var tableViewInitiative: UITableView!
     private let reuseIdentifier = "initiativeCell"
+    // private var playersService: PlayersService
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,10 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         tableViewInitiative.dataSource = self
         tableViewInitiative.delegate = self
         tableViewInitiative.rowHeight = 120
-        
+        // playersService = AppDelegate.getPlayersService()
+        // players = playersService.getAllPlayers()
         // Do any additional setup after loading the view.
+        
     }
     
     override func didReceiveMemoryWarning() {
