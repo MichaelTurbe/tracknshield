@@ -21,6 +21,7 @@ class PlayersService {
     }
     
     func addPlayer(player: Player) -> () {
+        print("adding player")
         playersRepository.addPlayer(player: player)
     }
 }

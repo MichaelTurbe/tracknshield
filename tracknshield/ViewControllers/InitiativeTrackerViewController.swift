@@ -14,6 +14,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     @IBOutlet weak var tableViewInitiative: UITableView!
     private let reuseIdentifier = "initiativeCell"
     var playersService: PlayersService!
+    @IBOutlet weak var buttonAddPlayer: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,17 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         // Do any additional setup after loading the view.
         playersService = AppDelegate.getPlayersService()
         players = playersService.getAllPlayers()
+        print("view did loadz")
         
+    }
+    @IBAction func addPlayerButtonSelecte4d(_ sender: Any) {
+        print("wtf")
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AddPlayer")
+        vc.modalPresentationStyle = UIModalPresentationStyle.popover
+        let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+        popover.barButtonItem = sender as? UIBarButtonItem
+        present(vc, animated: true, completion:nil)
     }
     
     override func didReceiveMemoryWarning() {

@@ -15,6 +15,7 @@ class InMemoryPlayerRepository : PlayerRepositoryProtocol {
         return players
     }
     func addPlayer(player: Player) -> () {
+        print("adding player")
         players.append(player)
     }
 }
