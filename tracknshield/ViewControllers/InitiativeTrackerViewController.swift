@@ -13,7 +13,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     var players: [Player] = [Player]()
     @IBOutlet weak var tableViewInitiative: UITableView!
     private let reuseIdentifier = "initiativeCell"
-    // private var playersService: PlayersService
+    var playersService: PlayersService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +22,10 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         tableViewInitiative.dataSource = self
         tableViewInitiative.delegate = self
         tableViewInitiative.rowHeight = 120
-        // playersService = AppDelegate.getPlayersService()
-        // players = playersService.getAllPlayers()
+
         // Do any additional setup after loading the view.
+        playersService = AppDelegate.getPlayersService()
+        players = playersService.getAllPlayers()
         
     }
     
@@ -34,7 +35,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return players.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

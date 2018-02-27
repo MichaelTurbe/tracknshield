@@ -10,6 +10,7 @@ import Foundation
 
 class InMemoryPlayerRepository : PlayerRepositoryProtocol {
     var players: [Player] = [Player]()
+    
     func getAllPlayers() -> [Player] {
         return players
     }

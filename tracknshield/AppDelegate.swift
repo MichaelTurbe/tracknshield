@@ -12,9 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    static let playersService : PlayerService(playerRepository: InMemoryPlayerRepository())
+    static var playersService: PlayersService = PlayersService(playersRepository: InMemoryPlayerRepository())
     
-    static func getPlayersService -> PlayersService {
+    static func getPlayersService() -> PlayersService {
         return playersService
     }
 

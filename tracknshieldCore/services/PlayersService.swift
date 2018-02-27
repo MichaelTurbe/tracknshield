@@ -9,18 +9,18 @@
 import Foundation
 
 class PlayersService {
-    let playersRepository: PlayersRepositoryProtocol
+    let playersRepository: PlayerRepositoryProtocol!
     
-    init(playersRepository: PlayersRepositoryProtocol) {
+    init(playersRepository: PlayerRepositoryProtocol) {
         self.playersRepository = playersRepository
     }
     
     func getAllPlayers() -> [Player] {
         let allPlayers = playersRepository.getAllPlayers()
-        returna allPlayers
+        return allPlayers
     }
     
     func addPlayer(player: Player) -> () {
-        playersRepository.addPlayer(player)
+        playersRepository.addPlayer(player: player)
     }
 }
