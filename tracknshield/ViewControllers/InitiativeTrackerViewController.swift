@@ -64,7 +64,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         let cell : PlayerTrackerTableViewCell = tableViewInitiative.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! PlayerTrackerTableViewCell
         
         // Configure the cell
-        // cell.setUpCell(foodItem: foodItem)
+        cell.setUpCell(player: player)
         return cell
     }
     

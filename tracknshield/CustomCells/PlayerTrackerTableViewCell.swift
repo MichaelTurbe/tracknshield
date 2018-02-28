@@ -14,6 +14,10 @@ class PlayerTrackerTableViewCell: UITableViewCell {
     @IBOutlet weak var viewHP: UIView!
     @IBOutlet weak var viewAC: UIView!
     @IBOutlet weak var viewPassivePerception: UIView!
+    @IBOutlet weak var labelAC: UILabel!
+    @IBOutlet weak var labelInitiative: UILabel!
+    @IBOutlet weak var labelPassivePerception: UILabel!
+    @IBOutlet weak var labelSpellSaveDC: UILabel!
     
     @IBOutlet weak var viewSpellSaveDC: UIView!
     override func awakeFromNib() {
@@ -26,6 +30,17 @@ class PlayerTrackerTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setUpCell(player: Player) {
+        labelName.text = player.name
+        labelHP.text = String(player.hp)
+        labelAC.text = String(player.ac)
+        labelInitiative.text = String(player.initiative)
+        labelPassivePerception.text = String(player.passivePerception)
+        labelSpellSaveDC.text = String(player.spellSaveDC)
+    }
+    
+    
     
     @IBOutlet weak var playerNameLabel: UILabel!
 }
