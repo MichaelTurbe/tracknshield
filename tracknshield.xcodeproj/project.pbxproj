@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE890B8620459D89007F2848 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE890B8520459D89007F2848 /* AddPlayerViewController.swift */; };
+		AE890B8820463ED9007F2848 /* PlayersUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE890B8720463ED9007F2848 /* PlayersUpdateDelegate.swift */; };
 		AEDFEA5C203E7899009A48B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA5B203E7899009A48B8 /* AppDelegate.swift */; };
 		AEDFEA5E203E7899009A48B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA5D203E7899009A48B8 /* ViewController.swift */; };
 		AEDFEA61203E7899009A48B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA5F203E7899009A48B8 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		AE890B8520459D89007F2848 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
+		AE890B8720463ED9007F2848 /* PlayersUpdateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersUpdateDelegate.swift; sourceTree = "<group>"; };
 		AEDFEA58203E7899009A48B8 /* tracknshield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tracknshield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDFEA5B203E7899009A48B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEDFEA5D203E7899009A48B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */,
+				AE890B8720463ED9007F2848 /* PlayersUpdateDelegate.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				AEDFEA5E203E7899009A48B8 /* ViewController.swift in Sources */,
 				AEDFEA802044F79E009A48B8 /* InMemoryPlayerRepository.swift in Sources */,
 				AEDFEA7320436556009A48B8 /* PlayerTrackerTableViewCell.swift in Sources */,
+				AE890B8820463ED9007F2848 /* PlayersUpdateDelegate.swift in Sources */,
 				AE890B8620459D89007F2848 /* AddPlayerViewController.swift in Sources */,
 				AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */,
 				AEDFEA7820438BF6009A48B8 /* InitiativeTrackerViewController.swift in Sources */,

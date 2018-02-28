@@ -17,6 +17,7 @@ class AddPlayerViewController: UIViewController {
     @IBOutlet weak var textFieldSpellSaveDC: UITextField!
     @IBOutlet weak var buttonDone: UIButton!
     var playersService: PlayersService!
+    var playersUpdateHandler: PlayersUpdateDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class AddPlayerViewController: UIViewController {
         self.playersService.addPlayer(player: player)
         self.dismiss(animated: true, completion: nil)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

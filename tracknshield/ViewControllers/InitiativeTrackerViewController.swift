@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PlayersUpdateDelegate {
+    
     var players: [Player] = [Player]()
     @IBOutlet weak var tableViewInitiative: UITableView!
     private let reuseIdentifier = "initiativeCell"
@@ -38,6 +39,11 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         let popover: UIPopoverPresentationController = vc.popoverPresentationController!
         popover.barButtonItem = sender as? UIBarButtonItem
         present(vc, animated: true, completion:nil)
+    }
+    
+    func handlePlayersUpdate() {
+        // update the dam ed grid
+        tableViewInitiative.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
