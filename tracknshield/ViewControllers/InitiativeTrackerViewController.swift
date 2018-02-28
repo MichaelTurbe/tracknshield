@@ -42,6 +42,13 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         present(addPlayerViewController, animated: true, completion:nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        let addPlayerViewController = segue.destination as! AddPlayerViewController
+        addPlayerViewController.setPlayersUpdateHandler(delegate: self)
+    }
+    
     func handlePlayersUpdate() {
         print("got into the update handler")
         // update the damed grid

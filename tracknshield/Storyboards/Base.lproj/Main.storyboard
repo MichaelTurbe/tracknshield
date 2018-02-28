@@ -68,7 +68,9 @@
                     <navigationItem key="navigationItem" id="Wgd-7E-nYV">
                         <barButtonItem key="rightBarButtonItem" title="Add Player" id="gMy-PX-XAa">
                             <connections>
-                                <action selector="addPlayerButtonSelecte4d:" destination="j4l-FM-pJ6" id="28D-E4-UKU"/>
+                                <segue destination="Bjg-ya-2FC" kind="popoverPresentation" popoverAnchorBarButtonItem="gMy-PX-XAa" id="1bV-N0-uIR">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -86,7 +88,7 @@
             <objects>
                 <viewController storyboardIdentifier="AddPlayer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bjg-ya-2FC" customClass="AddPlayerViewController" customModule="tracknshield" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2MT-Be-T4S">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfl-di-hjK">
