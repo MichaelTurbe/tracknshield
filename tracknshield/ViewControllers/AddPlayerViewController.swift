@@ -17,7 +17,7 @@ class AddPlayerViewController: UIViewController {
     @IBOutlet weak var textFieldSpellSaveDC: UITextField!
     @IBOutlet weak var buttonDone: UIButton!
     var playersService: PlayersService!
-    var playersUpdateHandler: PlayersUpdateDelegate!
+    var playersUpdateHandler: PlayersUpdateDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,13 @@ class AddPlayerViewController: UIViewController {
         let spellSaveDC = Int(self.textFieldSpellSaveDC.text!)
         let player:Player = Player(name: playerName!, initiative: 0, hp: hp!, ac: ac!, spellSaveDC: spellSaveDC!, passivePerception: passivePerception!)
         self.playersService.addPlayer(player: player)
+        self.playersUpdateHandler?.handlePlayersUpdate()
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func setPlayersUpdateHandler(delegate: PlayersUpdateDelegate) {
+        print("setting delgate")
+        self.playersUpdateHandler = delegate
     }
     
     override func didReceiveMemoryWarning() {

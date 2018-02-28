@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PlayerRepositoryProtocol {
+protocol PlayerRepositoryProtocol : class {
     func getAllPlayers() -> [Player]
     func addPlayer(player: Player) -> ()
 }

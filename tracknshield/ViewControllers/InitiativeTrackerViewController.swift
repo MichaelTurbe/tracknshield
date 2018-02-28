@@ -34,15 +34,18 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     @IBAction func addPlayerButtonSelecte4d(_ sender: Any) {
         print("wtf")
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AddPlayer")
-        vc.modalPresentationStyle = UIModalPresentationStyle.popover
-        let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+        let addPlayerViewController = storyboard.instantiateViewController(withIdentifier: "AddPlayer") as! AddPlayerViewController
+        addPlayerViewController.setPlayersUpdateHandler(delegate: self)
+        addPlayerViewController.modalPresentationStyle = UIModalPresentationStyle.popover
+        let popover: UIPopoverPresentationController = addPlayerViewController.popoverPresentationController!
         popover.barButtonItem = sender as? UIBarButtonItem
-        present(vc, animated: true, completion:nil)
+        present(addPlayerViewController, animated: true, completion:nil)
     }
     
     func handlePlayersUpdate() {
-        // update the dam ed grid
+        print("got into the update handler")
+        // update the damed grid
+        players = playersService.getAllPlayers()
         tableViewInitiative.reloadData()
     }
     
@@ -56,7 +59,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // let player = players[indexPath.row]
+        let player = players[indexPath.row]
         // selectedItem = foodItem
         let cell : PlayerTrackerTableViewCell = tableViewInitiative.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! PlayerTrackerTableViewCell
         
