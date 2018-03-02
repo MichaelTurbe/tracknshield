@@ -35,7 +35,7 @@ class PlayerTrackerTableViewCell: UITableViewCell {
         labelName.text = player.name
         labelHP.text = String(player.hp)
         labelAC.text = String(player.ac)
-        labelInitiative.text = String(player.initiative)
+
         labelPassivePerception.text = String(player.passivePerception)
         labelSpellSaveDC.text = String(player.spellSaveDC)
     }

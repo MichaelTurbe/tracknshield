@@ -29,9 +29,8 @@ class AddPlayerViewController: UIViewController {
         let playerName = self.textFieldPlayerName.text
         let hp = Int(self.textFieldHP.text!)
         let ac = Int(self.textFieldAC.text!)
-        let passivePerception = Int(self.textFieldPassivePerception.text!)
         let spellSaveDC = Int(self.textFieldSpellSaveDC.text!)
-        let player:Player = Player(name: playerName!, initiative: 0, hp: hp!, ac: ac!, spellSaveDC: spellSaveDC!, passivePerception: passivePerception!)
+        let player:Player = Player(name: playerName!, initiative: 0, hp: hp!, ac: ac!, spellSaveDC: spellSaveDC!)
         self.playersService.addPlayer(player: player)
         self.playersUpdateHandler?.handlePlayersUpdate()
         self.dismiss(animated: true, completion: nil)
