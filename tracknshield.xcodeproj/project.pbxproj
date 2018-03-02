@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AE4C52262048F47800BC6974 /* models in Resources */ = {isa = PBXBuildFile; fileRef = AE4C52242048F47800BC6974 /* models */; };
 		AE4C52272048F47800BC6974 /* data access in Resources */ = {isa = PBXBuildFile; fileRef = AE4C52252048F47800BC6974 /* data access */; };
+		AE4C522E2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4C522C2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift */; };
+		AE4C522F2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE4C522D2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib */; };
 		AE890B8620459D89007F2848 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE890B8520459D89007F2848 /* AddPlayerViewController.swift */; };
 		AE890B8820463ED9007F2848 /* PlayersUpdateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE890B8720463ED9007F2848 /* PlayersUpdateDelegate.swift */; };
 		AEDFEA5C203E7899009A48B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA5B203E7899009A48B8 /* AppDelegate.swift */; };
@@ -16,8 +18,6 @@
 		AEDFEA61203E7899009A48B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA5F203E7899009A48B8 /* Main.storyboard */; };
 		AEDFEA63203E7899009A48B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA62203E7899009A48B8 /* Assets.xcassets */; };
 		AEDFEA66203E7899009A48B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA64203E7899009A48B8 /* LaunchScreen.storyboard */; };
-		AEDFEA7320436556009A48B8 /* PlayerTrackerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7120436556009A48B8 /* PlayerTrackerTableViewCell.swift */; };
-		AEDFEA7420436556009A48B8 /* PlayerTrackerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEDFEA7220436556009A48B8 /* PlayerTrackerTableViewCell.xib */; };
 		AEDFEA7820438BF6009A48B8 /* InitiativeTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7720438BF6009A48B8 /* InitiativeTrackerViewController.swift */; };
 		AEDFEA7A20438E78009A48B8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7920438E78009A48B8 /* Player.swift */; };
 		AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */; };
@@ -28,6 +28,8 @@
 /* Begin PBXFileReference section */
 		AE4C52242048F47800BC6974 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
 		AE4C52252048F47800BC6974 /* data access */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "data access"; sourceTree = "<group>"; };
+		AE4C522C2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInitiativeTableViewCell.swift; sourceTree = "<group>"; };
+		AE4C522D2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerInitiativeTableViewCell.xib; sourceTree = "<group>"; };
 		AE890B8520459D89007F2848 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		AE890B8720463ED9007F2848 /* PlayersUpdateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersUpdateDelegate.swift; sourceTree = "<group>"; };
 		AEDFEA58203E7899009A48B8 /* tracknshield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tracknshield.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,8 +39,6 @@
 		AEDFEA62203E7899009A48B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEDFEA65203E7899009A48B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEDFEA67203E7899009A48B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEDFEA7120436556009A48B8 /* PlayerTrackerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackerTableViewCell.swift; sourceTree = "<group>"; };
-		AEDFEA7220436556009A48B8 /* PlayerTrackerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTrackerTableViewCell.xib; sourceTree = "<group>"; };
 		AEDFEA7720438BF6009A48B8 /* InitiativeTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitiativeTrackerViewController.swift; sourceTree = "<group>"; };
 		AEDFEA7920438E78009A48B8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -122,8 +122,8 @@
 		AEDFEA70204361AA009A48B8 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				AEDFEA7120436556009A48B8 /* PlayerTrackerTableViewCell.swift */,
-				AEDFEA7220436556009A48B8 /* PlayerTrackerTableViewCell.xib */,
+				AE4C522C2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift */,
+				AE4C522D2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -220,12 +220,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4C522F2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib in Resources */,
 				AE4C52262048F47800BC6974 /* models in Resources */,
 				AE4C52272048F47800BC6974 /* data access in Resources */,
 				AEDFEA66203E7899009A48B8 /* LaunchScreen.storyboard in Resources */,
 				AEDFEA63203E7899009A48B8 /* Assets.xcassets in Resources */,
 				AEDFEA61203E7899009A48B8 /* Main.storyboard in Resources */,
-				AEDFEA7420436556009A48B8 /* PlayerTrackerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +239,7 @@
 				AEDFEA822044F953009A48B8 /* PlayersService.swift in Sources */,
 				AEDFEA5E203E7899009A48B8 /* ViewController.swift in Sources */,
 				AEDFEA802044F79E009A48B8 /* InMemoryPlayerRepository.swift in Sources */,
-				AEDFEA7320436556009A48B8 /* PlayerTrackerTableViewCell.swift in Sources */,
+				AE4C522E2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift in Sources */,
 				AE890B8820463ED9007F2848 /* PlayersUpdateDelegate.swift in Sources */,
 				AE890B8620459D89007F2848 /* AddPlayerViewController.swift in Sources */,
 				AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */,

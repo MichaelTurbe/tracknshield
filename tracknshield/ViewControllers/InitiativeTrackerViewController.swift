@@ -23,7 +23,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewInitiative.register(UINib(nibName: "PlayerTrackerTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
+        tableViewInitiative.register(UINib(nibName: "PlayerInitiativeTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
         // players = foodItemService.getAllFoodItemsByCategory(category:category!)
         tableViewInitiative.dataSource = self
         tableViewInitiative.delegate = self
@@ -72,7 +72,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let player = players[indexPath.row]
         // selectedItem = foodItem
-        let cell : PlayerTrackerTableViewCell = tableViewInitiative.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! PlayerTrackerTableViewCell
+        let cell : PlayerInitiativeTableViewCell = tableViewInitiative.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! PlayerInitiativeTableViewCell
         
         // Configure the cell
         cell.setUpCell(player: player)
