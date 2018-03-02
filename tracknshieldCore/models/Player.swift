@@ -16,11 +16,11 @@ class Player {
     var spellSaveDC: Int = 0
     var passivePerception: Int = 0
     
-    init(name: String, initiative: Int, hp: Int, ac: Int, spellSaveDC: Int) {
+    init(name: String, hp: Int, ac: Int, spellSaveDC: Int, passivePerception: Int) {
         self.name = name
-        self.initiative = initiative
         self.hp = hp
         self.ac = ac
         self.spellSaveDC = spellSaveDC
+        self.passivePerception = passivePerception
     }
 }
