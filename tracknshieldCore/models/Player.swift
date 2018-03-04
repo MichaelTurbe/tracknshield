@@ -9,6 +9,7 @@
 import Foundation
 
 class Player {
+    
     var name: String = ""
     var initiative: Int = 0
     var hp: Int = 0

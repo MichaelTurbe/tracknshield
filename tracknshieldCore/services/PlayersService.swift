@@ -24,4 +24,16 @@ class PlayersService {
         print("adding player")
         playersRepository.addPlayer(player: player)
     }
+    
+    func updatePlayer(player: Player) -> () {
+        print("updating player")
+        playersRepository.updatePlayer(player: player)
+    }
+    
+    func sortPlayersByInitiative() -> [Player] {
+        let allPlayers = self.playersRepository.getAllPlayers()
+        let sorted = allPlayers.sorted(by: {$0.initiative > $1.initiative})
+        return sorted
+    }
+    
 }

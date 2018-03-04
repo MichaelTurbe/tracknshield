@@ -76,6 +76,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="42"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="initiativeTextFieldEditingDidEnd:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="AV0-yd-ZbZ"/>
+                                    <action selector="textFieldInitiativeValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="32V-s0-DRI"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <constraints>
@@ -236,6 +240,7 @@
                 <outlet property="labelName" destination="krL-TB-GC6" id="TQV-xL-vu7"/>
                 <outlet property="labelPassivePerception" destination="cJd-nE-xx0" id="Ij7-si-Jih"/>
                 <outlet property="labelSpellSaveDC" destination="lBv-1S-nct" id="EjJ-Ix-gN9"/>
+                <outlet property="textFieldInitiative" destination="ZOd-pQ-QGC" id="aAk-EO-XI7"/>
             </connections>
             <point key="canvasLocation" x="-140" y="107.5"/>
         </tableViewCell>

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE4C52262048F47800BC6974 /* models in Resources */ = {isa = PBXBuildFile; fileRef = AE4C52242048F47800BC6974 /* models */; };
-		AE4C52272048F47800BC6974 /* data access in Resources */ = {isa = PBXBuildFile; fileRef = AE4C52252048F47800BC6974 /* data access */; };
 		AE4C522E2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4C522C2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift */; };
 		AE4C522F2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE4C522D2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib */; };
 		AE4C5232204AE16700BC6974 /* NanumBrushScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE4C5231204AE16700BC6974 /* NanumBrushScript-Regular.ttf */; };
@@ -28,8 +26,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AE4C52242048F47800BC6974 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
-		AE4C52252048F47800BC6974 /* data access */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "data access"; sourceTree = "<group>"; };
 		AE4C522C2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInitiativeTableViewCell.swift; sourceTree = "<group>"; };
 		AE4C522D2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerInitiativeTableViewCell.xib; sourceTree = "<group>"; };
 		AE4C5231204AE16700BC6974 /* NanumBrushScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumBrushScript-Regular.ttf"; sourceTree = "<group>"; };
@@ -107,8 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				AEDFEA7C2043C297009A48B8 /* data access */,
-				AE4C52252048F47800BC6974 /* data access */,
-				AE4C52242048F47800BC6974 /* models */,
 				AEDFEA7B2043C27E009A48B8 /* protocols */,
 				AEDFEA76204386A7009A48B8 /* services */,
 				AEDFEA75204386A0009A48B8 /* models */,
@@ -236,9 +230,7 @@
 			files = (
 				AE4C5232204AE16700BC6974 /* NanumBrushScript-Regular.ttf in Resources */,
 				AE4C522F2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib in Resources */,
-				AE4C52262048F47800BC6974 /* models in Resources */,
 				AE59D604204AE99F0073C52C /* Kavivanar-Regular.ttf in Resources */,
-				AE4C52272048F47800BC6974 /* data access in Resources */,
 				AEDFEA66203E7899009A48B8 /* LaunchScreen.storyboard in Resources */,
 				AEDFEA63203E7899009A48B8 /* Assets.xcassets in Resources */,
 				AEDFEA61203E7899009A48B8 /* Main.storyboard in Resources */,

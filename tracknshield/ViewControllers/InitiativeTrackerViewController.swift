@@ -19,12 +19,23 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     
     @IBAction func sortInitiativePressed(_ sender: Any) {
         print("sort that shit")
+        let sortedPlayers = playersService.sortPlayersByInitiative()
+        reloadTableData(newPlayers: sortedPlayers)
+    }
+    
+    func reloadTableData(newPlayers: [Player]) {
+        DispatchQueue.main.async {
+            self.players = [Player]()
+            self.tableViewInitiative.reloadData()
+            self.players = newPlayers
+            self.tableViewInitiative.reloadData()
+        }
     }
     
     override func viewDidLoad() {
+        print("view did load!!!!")
         super.viewDidLoad()
         tableViewInitiative.register(UINib(nibName: "PlayerInitiativeTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
-        // players = foodItemService.getAllFoodItemsByCategory(category:category!)
         tableViewInitiative.dataSource = self
         tableViewInitiative.delegate = self
         tableViewInitiative.rowHeight = 120
@@ -56,8 +67,8 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     func handlePlayersUpdate() {
         print("got into the update handler")
         // update the damed grid
-        players = playersService.getAllPlayers()
-        tableViewInitiative.reloadData()
+        let newPlayers = playersService.getAllPlayers()
+        reloadTableData(newPlayers: newPlayers)
     }
     
     override func didReceiveMemoryWarning() {
@@ -69,8 +80,12 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         return players.count
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let player = players[indexPath.row]
+        let player = self.players[indexPath.row]
         // selectedItem = foodItem
         let cell : PlayerInitiativeTableViewCell = tableViewInitiative.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! PlayerInitiativeTableViewCell
         

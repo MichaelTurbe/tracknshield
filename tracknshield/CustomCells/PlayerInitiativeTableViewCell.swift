@@ -14,24 +14,41 @@ class PlayerInitiativeTableViewCell: UITableViewCell {
     @IBOutlet weak var labelAC: UILabel!
     @IBOutlet weak var labelPassivePerception: UILabel!
     @IBOutlet weak var labelSpellSaveDC: UILabel!
+    @IBOutlet weak var textFieldInitiative: UITextField!
+    var player: Player!
+    var playersService: PlayersService!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        playersService = AppDelegate.getPlayersService()
     }
-
+    @IBAction func initiativeTextFieldEditingDidEnd(_ sender: UITextField) {
+        print("initiative editing ended")
+        let newInitiative = Int(sender.text!)
+        player.initiative = newInitiative!
+        playersService.updatePlayer(player: player)
+    }
+    
+    @IBAction func textFieldInitiativeValueChanged(_ sender: UITextField) {
+        print("initiative value changed")
+        let newInitiative = Int(sender.text!)
+        player.initiative = newInitiative!
+        playersService.updatePlayer(player: player)
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-    
     func setUpCell(player: Player) {
+        self.player = player
         labelName.text = player.name
         labelHP.text = String(player.hp)
         labelAC.text = String(player.ac)
         labelPassivePerception.text = String(player.passivePerception)
         labelSpellSaveDC.text = String(player.spellSaveDC)
+        textFieldInitiative.text = String(player.initiative)
     }
     
 }

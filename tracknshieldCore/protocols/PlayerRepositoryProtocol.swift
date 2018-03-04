@@ -11,4 +11,5 @@ import Foundation
 protocol PlayerRepositoryProtocol : class {
     func getAllPlayers() -> [Player]
     func addPlayer(player: Player) -> ()
+    func updatePlayer(player: Player) -> ()
 }

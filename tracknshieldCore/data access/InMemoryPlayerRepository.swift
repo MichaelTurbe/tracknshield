@@ -9,7 +9,7 @@
 import Foundation
 
 class InMemoryPlayerRepository : PlayerRepositoryProtocol {
-    var players: [Player] = [Player]()
+    var players: Dictionary<String, Player> = Dictionary<String, Player>()
     init() {
         var p1 = Player(name: "Toad Lord", hp: 67, ac: 19, spellSaveDC: 15, passivePerception: 16)
         var p2 = Player(name: "Somewhere", hp: 51, ac: 14, spellSaveDC: 16, passivePerception: 12)
@@ -17,19 +17,30 @@ class InMemoryPlayerRepository : PlayerRepositoryProtocol {
         var p4 = Player(name: "Purr", hp: 52, ac: 17, spellSaveDC: 13, passivePerception: 16)
         var p5 = Player(name: "Thoros", hp: 77, ac: 19, spellSaveDC: 16, passivePerception: 14)
         var p6 = Player(name: "Eborisk", hp: 88, ac: 19, spellSaveDC: 14, passivePerception: 15)
-        players.append(p1)
-        players.append(p2)
-        players.append(p3)
-        players.append(p4)
-        players.append(p5)
-        players.append(p6)
+        players[p1.name] = p1
+        players[p2.name] = p2
+        players[p3.name] = p3
+        players[p4.name] = p4
+        players[p5.name] = p5
+        players[p6.name] = p6
+
     }
     
     func getAllPlayers() -> [Player] {
-        return players
+        var outputPlayers = [Player]()
+        for item in players {
+            outputPlayers.append(players[item.key]!)
+        }
+        return outputPlayers
     }
     func addPlayer(player: Player) -> () {
         print("adding player")
-        players.append(player)
+        players[player.name] = player
+    }
+    
+    func updatePlayer(player: Player) -> () {
+        print("updating player")
+        print(player.initiative)
+        players[player.name] = player
     }
 }
