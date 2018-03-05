@@ -16,6 +16,8 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     private let reuseIdentifier = "initiativeCell"
     var playersService: PlayersService!
     @IBOutlet weak var buttonAddPlayer: UIBarButtonItem!
+    @IBOutlet weak var playerDetailView: UIView!
+
     
     @IBAction func sortInitiativePressed(_ sender: Any) {
         print("sort that shit")
@@ -35,6 +37,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     override func viewDidLoad() {
         print("view did load!!!!")
         super.viewDidLoad()
+
         tableViewInitiative.register(UINib(nibName: "PlayerInitiativeTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
         tableViewInitiative.dataSource = self
         tableViewInitiative.delegate = self

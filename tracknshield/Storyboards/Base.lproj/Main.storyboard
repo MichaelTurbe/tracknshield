@@ -58,7 +58,6 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-hr-BT6">
                                 <rect key="frame" x="674" y="64" width="350" height="655"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="H3H-VP-8ya"/>
                                 </constraints>
@@ -95,6 +94,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="buttonAddPlayer" destination="gMy-PX-XAa" id="aui-jO-d8C"/>
+                        <outlet property="playerDetailView" destination="sp2-hr-BT6" id="Vtb-Wy-7CG"/>
                         <outlet property="tableViewInitiative" destination="BDj-0I-iTP" id="TKc-PD-05w"/>
                     </connections>
                 </viewController>

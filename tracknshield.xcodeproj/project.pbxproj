@@ -23,6 +23,9 @@
 		AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */; };
 		AEDFEA802044F79E009A48B8 /* InMemoryPlayerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7F2044F79E009A48B8 /* InMemoryPlayerRepository.swift */; };
 		AEDFEA822044F953009A48B8 /* PlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA812044F953009A48B8 /* PlayersService.swift */; };
+		E4D80F77204CC3F1009F40AA /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D80F76204CC3F1009F40AA /* NibLoadingView.swift */; };
+		E4D80F7A204CC530009F40AA /* PlayerDetailViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D80F78204CC530009F40AA /* PlayerDetailViewViewController.swift */; };
+		E4D80F7B204CC530009F40AA /* PlayerDetailViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4D80F79204CC530009F40AA /* PlayerDetailViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AEDFEA7F2044F79E009A48B8 /* InMemoryPlayerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryPlayerRepository.swift; sourceTree = "<group>"; };
 		AEDFEA812044F953009A48B8 /* PlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersService.swift; sourceTree = "<group>"; };
+		E4D80F76204CC3F1009F40AA /* NibLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadingView.swift; sourceTree = "<group>"; };
+		E4D80F78204CC530009F40AA /* PlayerDetailViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewViewController.swift; sourceTree = "<group>"; };
+		E4D80F79204CC530009F40AA /* PlayerDetailViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDetailViewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		AEDFEA5A203E7899009A48B8 /* tracknshield */ = {
 			isa = PBXGroup;
 			children = (
+				E4D80F71204C94AF009F40AA /* Custom Views */,
 				AE4C5230204AE04100BC6974 /* Fonts */,
 				AEDFEA70204361AA009A48B8 /* CustomCells */,
 				AEDFEA6F204361A3009A48B8 /* Storyboards */,
@@ -169,6 +176,16 @@
 			path = "data access";
 			sourceTree = "<group>";
 		};
+		E4D80F71204C94AF009F40AA /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4D80F76204CC3F1009F40AA /* NibLoadingView.swift */,
+				E4D80F78204CC530009F40AA /* PlayerDetailViewViewController.swift */,
+				E4D80F79204CC530009F40AA /* PlayerDetailViewViewController.xib */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,6 +251,7 @@
 				AEDFEA66203E7899009A48B8 /* LaunchScreen.storyboard in Resources */,
 				AEDFEA63203E7899009A48B8 /* Assets.xcassets in Resources */,
 				AEDFEA61203E7899009A48B8 /* Main.storyboard in Resources */,
+				E4D80F7B204CC530009F40AA /* PlayerDetailViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +267,11 @@
 				AEDFEA802044F79E009A48B8 /* InMemoryPlayerRepository.swift in Sources */,
 				AE4C522E2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift in Sources */,
 				AE890B8820463ED9007F2848 /* PlayersUpdateDelegate.swift in Sources */,
+				E4D80F7A204CC530009F40AA /* PlayerDetailViewViewController.swift in Sources */,
 				AE890B8620459D89007F2848 /* AddPlayerViewController.swift in Sources */,
 				AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */,
 				AEDFEA7820438BF6009A48B8 /* InitiativeTrackerViewController.swift in Sources */,
+				E4D80F77204CC3F1009F40AA /* NibLoadingView.swift in Sources */,
 				AEDFEA7A20438E78009A48B8 /* Player.swift in Sources */,
 				AEDFEA5C203E7899009A48B8 /* AppDelegate.swift in Sources */,
 			);
