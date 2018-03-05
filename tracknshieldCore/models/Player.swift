@@ -8,7 +8,13 @@
 
 import Foundation
 
-class Player {
+class Player : Equatable {
+    
+    static func ==(lhs: Player, rhs: Player) -> Bool {
+        if(lhs.name == rhs.name) { return true }
+        else { return false }
+    }
+    
     
     var name: String = ""
     var initiative: Int = 0

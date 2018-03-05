@@ -19,11 +19,35 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     @IBOutlet weak var playerDetailView: UIView!
     @IBOutlet weak var buttonStartTurnTracker: UIBarButtonItem!
     
+    @IBOutlet weak var buttonNextPlayer: UIBarButtonItem!
     @IBAction func startTurnTrackerPressed(_ sender: UIBarButtonItem) {
-        players[0].isPlayersTurn = true
+        currentlySelectedPlayer = players[0]
+        currentlySelectedPlayer.isPlayersTurn = true
+        playersService.updatePlayer(player: currentlySelectedPlayer)
         reloadTableData()
     }
     
+    @IBAction func buttonNextPlayerPressed(_ sender: UIBarButtonItem) {
+        if let index = players.index(of: currentlySelectedPlayer){
+            var currentPlayerIndex = Int(index)
+            currentlySelectedPlayer.isPlayersTurn = false
+            if(currentPlayerIndex == (players.count - 1)) {
+                // go back to the beginning
+                currentlySelectedPlayer = players[0]
+                currentlySelectedPlayer.isPlayersTurn = true
+                playersService.updatePlayer(player: currentlySelectedPlayer)
+                reloadTableData()
+            }
+            else {
+                // go back to the beginning
+                currentPlayerIndex = currentPlayerIndex + 1
+                currentlySelectedPlayer = players[currentPlayerIndex]
+                currentlySelectedPlayer.isPlayersTurn = true
+                playersService.updatePlayer(player: currentlySelectedPlayer)
+                reloadTableData()
+            }
+        }
+    }
     @IBAction func sortInitiativePressed(_ sender: Any) {
         print("sort that shit")
         let sortedPlayers = playersService.sortPlayersByInitiative()

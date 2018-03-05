@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="evl-0u-ibZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kRu-zE-zn7">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -53,52 +52,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BDj-0I-iTP">
-                                <rect key="frame" x="5" y="69" width="714" height="645"/>
+                                <rect key="frame" x="5" y="69" width="714" height="650"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-hr-BT6">
-                                <rect key="frame" x="724" y="64" width="300" height="655"/>
+                                <rect key="frame" x="724" y="69" width="300" height="650"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="H3H-VP-8ya"/>
                                 </constraints>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7o-Il-WgF">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <items>
+                                    <barButtonItem title="Sort Initiative" id="EJE-0D-Bs3">
+                                        <connections>
+                                            <action selector="sortInitiativePressed:" destination="j4l-FM-pJ6" id="ziS-QB-qJ1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Start Turn Tracker" id="nLQ-ab-oqx">
+                                        <connections>
+                                            <action selector="startTurnTrackerPressed:" destination="j4l-FM-pJ6" id="GmC-Ky-LqU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="aV7-3A-ex3"/>
+                                    <barButtonItem systemItem="rewind" id="wkx-5P-TMu"/>
+                                    <barButtonItem systemItem="fastForward" id="RiV-kD-fF0">
+                                        <connections>
+                                            <action selector="buttonNextPlayerPressed:" destination="j4l-FM-pJ6" id="lXn-mT-WQ7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bci-lY-13K"/>
+                                    <barButtonItem title="Add Player" id="gMy-PX-XAa">
+                                        <connections>
+                                            <segue destination="Bjg-ya-2FC" kind="popoverPresentation" popoverAnchorBarButtonItem="gMy-PX-XAa" id="1bV-N0-uIR">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9S2-yU-ovu" firstAttribute="bottom" secondItem="BDj-0I-iTP" secondAttribute="bottom" constant="5" id="1Zy-Dh-sXG"/>
+                            <constraint firstItem="sp2-hr-BT6" firstAttribute="top" secondItem="9S2-yU-ovu" secondAttribute="top" constant="5" id="AaW-ch-dwd"/>
                             <constraint firstItem="BDj-0I-iTP" firstAttribute="top" secondItem="9S2-yU-ovu" secondAttribute="top" constant="5" id="EMj-Wj-YCZ"/>
+                            <constraint firstItem="9S2-yU-ovu" firstAttribute="trailing" secondItem="g7o-Il-WgF" secondAttribute="trailing" id="HVF-yx-h08"/>
                             <constraint firstItem="sp2-hr-BT6" firstAttribute="leading" secondItem="BDj-0I-iTP" secondAttribute="trailing" constant="5" id="JXY-P4-zMv"/>
                             <constraint firstItem="BDj-0I-iTP" firstAttribute="leading" secondItem="9S2-yU-ovu" secondAttribute="leading" constant="5" id="Mb4-0J-PE6"/>
-                            <constraint firstItem="sp2-hr-BT6" firstAttribute="top" secondItem="9S2-yU-ovu" secondAttribute="top" id="USm-Dl-dkH"/>
+                            <constraint firstItem="g7o-Il-WgF" firstAttribute="top" secondItem="BDj-0I-iTP" secondAttribute="bottom" constant="5" id="NxW-cb-ckx"/>
+                            <constraint firstItem="g7o-Il-WgF" firstAttribute="top" secondItem="sp2-hr-BT6" secondAttribute="bottom" constant="5" id="QrA-Pp-voB"/>
+                            <constraint firstItem="g7o-Il-WgF" firstAttribute="leading" secondItem="Urn-tk-wis" secondAttribute="leading" id="dkz-W4-oru"/>
                             <constraint firstItem="9S2-yU-ovu" firstAttribute="trailing" secondItem="sp2-hr-BT6" secondAttribute="trailing" id="eXk-Sa-Gq3"/>
-                            <constraint firstItem="9S2-yU-ovu" firstAttribute="bottom" secondItem="sp2-hr-BT6" secondAttribute="bottom" id="rmg-Th-Mvz"/>
+                            <constraint firstItem="g7o-Il-WgF" firstAttribute="bottom" secondItem="9S2-yU-ovu" secondAttribute="bottom" id="z80-Ko-D1E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9S2-yU-ovu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Wgd-7E-nYV">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Add Foe" id="2U0-UM-wCy"/>
-                            <barButtonItem title="Add Player" id="gMy-PX-XAa">
-                                <connections>
-                                    <segue destination="Bjg-ya-2FC" kind="popoverPresentation" popoverAnchorBarButtonItem="gMy-PX-XAa" id="1bV-N0-uIR">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Start Turn Tracker" id="nLQ-ab-oqx">
-                                <connections>
-                                    <action selector="startTurnTrackerPressed:" destination="j4l-FM-pJ6" id="GmC-Ky-LqU"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Sort Initiative" id="EJE-0D-Bs3">
-                                <connections>
-                                    <action selector="sortInitiativePressed:" destination="j4l-FM-pJ6" id="ziS-QB-qJ1"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Wgd-7E-nYV"/>
                     <connections>
                         <outlet property="buttonAddPlayer" destination="gMy-PX-XAa" id="aui-jO-d8C"/>
+                        <outlet property="buttonNextPlayer" destination="RiV-kD-fF0" id="tfl-F4-4zo"/>
                         <outlet property="buttonStartTurnTracker" destination="nLQ-ab-oqx" id="p6a-sw-4pb"/>
                         <outlet property="playerDetailView" destination="sp2-hr-BT6" id="Vtb-Wy-7CG"/>
                         <outlet property="tableViewInitiative" destination="BDj-0I-iTP" id="TKc-PD-05w"/>
@@ -210,24 +222,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMp-Hk-qWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1753.7109375" y="1285.9375"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="Juj-LL-a4p">
-            <objects>
-                <tabBarController id="evl-0u-ibZ" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZAG-Sn-ERA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="kRu-zE-zn7" kind="relationship" relationship="viewControllers" id="0Lv-hy-xbR"/>
-                        <segue destination="O57-Wc-yYO" kind="relationship" relationship="viewControllers" id="bIv-WN-69Z"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LP3-Fp-UcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-323" y="145"/>
         </scene>
     </scenes>
 </document>
