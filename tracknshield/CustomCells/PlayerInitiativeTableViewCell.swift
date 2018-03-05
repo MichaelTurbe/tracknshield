@@ -15,9 +15,12 @@ class PlayerInitiativeTableViewCell: UITableViewCell {
     @IBOutlet weak var labelPassivePerception: UILabel!
     @IBOutlet weak var labelSpellSaveDC: UILabel!
     @IBOutlet weak var textFieldInitiative: UITextField!
+    
     var player: Player!
     var playersService: PlayersService!
     
+    
+    @IBOutlet weak var currentPlayerIndicator: UIActivityIndicatorView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -49,6 +52,11 @@ class PlayerInitiativeTableViewCell: UITableViewCell {
         labelPassivePerception.text = String(player.passivePerception)
         labelSpellSaveDC.text = String(player.spellSaveDC)
         textFieldInitiative.text = String(player.initiative)
+        if(player.isPlayersTurn) {
+            self.currentPlayerIndicator.startAnimating()
+        } else {
+            self.currentPlayerIndicator.stopAnimating()
+        }
     }
     
 }

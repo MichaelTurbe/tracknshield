@@ -10,14 +10,19 @@ import Foundation
 import UIKit
 
 class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PlayersUpdateDelegate {
-    
+    var currentlySelectedPlayer: Player!
     var players: [Player] = [Player]()
     @IBOutlet weak var tableViewInitiative: UITableView!
     private let reuseIdentifier = "initiativeCell"
     var playersService: PlayersService!
     @IBOutlet weak var buttonAddPlayer: UIBarButtonItem!
     @IBOutlet weak var playerDetailView: UIView!
-
+    @IBOutlet weak var buttonStartTurnTracker: UIBarButtonItem!
+    
+    @IBAction func startTurnTrackerPressed(_ sender: UIBarButtonItem) {
+        players[0].isPlayersTurn = true
+        reloadTableData()
+    }
     
     @IBAction func sortInitiativePressed(_ sender: Any) {
         print("sort that shit")
@@ -30,6 +35,12 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
             self.players = [Player]()
             self.tableViewInitiative.reloadData()
             self.players = newPlayers
+            self.tableViewInitiative.reloadData()
+        }
+    }
+    
+    func reloadTableData() {
+        DispatchQueue.main.async {
             self.tableViewInitiative.reloadData()
         }
     }
@@ -95,6 +106,10 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         // Configure the cell
         cell.setUpCell(player: player)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let player = self.players[indexPath.row]
     }
     
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
