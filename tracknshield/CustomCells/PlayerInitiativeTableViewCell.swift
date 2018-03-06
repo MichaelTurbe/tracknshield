@@ -28,16 +28,20 @@ class PlayerInitiativeTableViewCell: UITableViewCell {
     }
     @IBAction func initiativeTextFieldEditingDidEnd(_ sender: UITextField) {
         print("initiative editing ended")
-        let newInitiative = Int(sender.text!)
-        player.initiative = newInitiative!
-        playersService.updatePlayer(player: player)
+        if(sender.text != "" && Int(sender.text!) != nil) {
+            let newInitiative = Int(sender.text!)
+            player.initiative = newInitiative!
+            playersService.updatePlayer(player: player)
+        }
     }
     
     @IBAction func textFieldInitiativeValueChanged(_ sender: UITextField) {
         print("initiative value changed")
-        let newInitiative = Int(sender.text!)
-        player.initiative = newInitiative!
-        playersService.updatePlayer(player: player)
+        if(sender.text != "" && Int(sender.text!) != nil) {
+            let newInitiative = Int(sender.text!)
+            player.initiative = newInitiative!
+            playersService.updatePlayer(player: player)
+        }
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

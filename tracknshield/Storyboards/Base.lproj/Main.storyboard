@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="574" y="180"/>
         </scene>
-        <!--Axe n' Shield - Initiative Tracker-->
+        <!--Track n' Shield - Initiative Tracker-->
         <scene sceneID="iv3-f6-RYz">
             <objects>
                 <viewController id="j4l-FM-pJ6" customClass="InitiativeTrackerViewController" customModule="tracknshield" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,14 +58,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BDj-0I-iTP">
-                                <rect key="frame" x="5" y="69" width="714" height="659"/>
+                                <rect key="frame" x="5" y="69" width="714" height="645"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-hr-BT6">
-                                <rect key="frame" x="724" y="69" width="300" height="659"/>
+                                <rect key="frame" x="724" y="69" width="300" height="645"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DnDBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hSs-cg-1mT">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="659"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="645"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xtb-fL-rG6">
                                         <rect key="frame" x="8" y="127" width="138.5" height="129"/>
@@ -308,7 +309,10 @@
                                 </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7o-Il-WgF">
-                                <rect key="frame" x="0.0" y="733" width="1024" height="35"/>
+                                <rect key="frame" x="0.0" y="719" width="999" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="WHv-hE-2yW"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Sort Initiative" id="EJE-0D-Bs3">
                                         <connections>
@@ -322,6 +326,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="aV7-3A-ex3"/>
                                     <barButtonItem systemItem="rewind" id="wkx-5P-TMu"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="fXa-qn-5Te"/>
                                     <barButtonItem systemItem="fastForward" id="RiV-kD-fF0">
                                         <connections>
                                             <action selector="buttonNextPlayerPressed:" destination="j4l-FM-pJ6" id="lXn-mT-WQ7"/>
@@ -342,18 +347,18 @@
                         <constraints>
                             <constraint firstItem="sp2-hr-BT6" firstAttribute="top" secondItem="9S2-yU-ovu" secondAttribute="top" constant="5" id="AaW-ch-dwd"/>
                             <constraint firstItem="BDj-0I-iTP" firstAttribute="top" secondItem="9S2-yU-ovu" secondAttribute="top" constant="5" id="EMj-Wj-YCZ"/>
-                            <constraint firstItem="9S2-yU-ovu" firstAttribute="trailing" secondItem="g7o-Il-WgF" secondAttribute="trailing" id="HVF-yx-h08"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g7o-Il-WgF" secondAttribute="trailing" constant="5" id="FXF-dW-LKt"/>
                             <constraint firstItem="sp2-hr-BT6" firstAttribute="leading" secondItem="BDj-0I-iTP" secondAttribute="trailing" constant="5" id="JXY-P4-zMv"/>
                             <constraint firstItem="BDj-0I-iTP" firstAttribute="leading" secondItem="9S2-yU-ovu" secondAttribute="leading" constant="5" id="Mb4-0J-PE6"/>
                             <constraint firstItem="g7o-Il-WgF" firstAttribute="top" secondItem="BDj-0I-iTP" secondAttribute="bottom" constant="5" id="NxW-cb-ckx"/>
                             <constraint firstItem="g7o-Il-WgF" firstAttribute="top" secondItem="sp2-hr-BT6" secondAttribute="bottom" constant="5" id="QrA-Pp-voB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="g7o-Il-WgF" secondAttribute="bottom" constant="5" id="Z77-2W-k8F"/>
                             <constraint firstItem="g7o-Il-WgF" firstAttribute="leading" secondItem="Urn-tk-wis" secondAttribute="leading" id="dkz-W4-oru"/>
                             <constraint firstItem="9S2-yU-ovu" firstAttribute="trailing" secondItem="sp2-hr-BT6" secondAttribute="trailing" id="eXk-Sa-Gq3"/>
-                            <constraint firstItem="g7o-Il-WgF" firstAttribute="bottom" secondItem="9S2-yU-ovu" secondAttribute="bottom" id="z80-Ko-D1E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9S2-yU-ovu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Axe n' Shield - Initiative Tracker" id="Wgd-7E-nYV"/>
+                    <navigationItem key="navigationItem" title="Track n' Shield - Initiative Tracker" id="Wgd-7E-nYV"/>
                     <connections>
                         <outlet property="buttonAddPlayer" destination="gMy-PX-XAa" id="aui-jO-d8C"/>
                         <outlet property="buttonDeletePlayer" destination="3qa-Nl-XBe" id="C1Q-4m-vnw"/>
