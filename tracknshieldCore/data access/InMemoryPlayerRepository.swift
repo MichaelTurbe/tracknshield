@@ -17,6 +17,13 @@ class InMemoryPlayerRepository : PlayerRepositoryProtocol {
         var p4 = Player(name: "Purr", hp: 52, ac: 17, spellSaveDC: 13, passivePerception: 16)
         var p5 = Player(name: "Thoros", hp: 77, ac: 19, spellSaveDC: 16, passivePerception: 14)
         var p6 = Player(name: "Eborisk", hp: 88, ac: 19, spellSaveDC: 14, passivePerception: 15)
+        p1.isPartyMember = true
+        p2.isPartyMember = true
+        p3.isPartyMember = true
+        p4.isPartyMember = true
+        p5.isPartyMember = true
+        p6.isPartyMember = true
+        
         players[p1.name] = p1
         players[p2.name] = p2
         players[p3.name] = p3

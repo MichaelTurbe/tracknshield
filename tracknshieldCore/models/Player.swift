@@ -23,6 +23,7 @@ class Player : Equatable {
     var spellSaveDC: Int = 0
     var passivePerception: Int = 0
     var isPlayersTurn: Bool = false
+    var isPartyMember: Bool = false
     
     init(name: String, hp: Int, ac: Int, spellSaveDC: Int, passivePerception: Int) {
         self.name = name

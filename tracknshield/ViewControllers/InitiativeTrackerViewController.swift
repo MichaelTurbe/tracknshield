@@ -10,40 +10,62 @@ import Foundation
 import UIKit
 
 class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PlayersUpdateDelegate {
+    var currentInitiativePlayer: Player!
     var currentlySelectedPlayer: Player!
     var players: [Player] = [Player]()
     @IBOutlet weak var tableViewInitiative: UITableView!
     private let reuseIdentifier = "initiativeCell"
     var playersService: PlayersService!
     @IBOutlet weak var buttonAddPlayer: UIBarButtonItem!
-    @IBOutlet weak var playerDetailView: UIView!
     @IBOutlet weak var buttonStartTurnTracker: UIBarButtonItem!
+    @IBOutlet weak var playerNameLabel: UILabel!
     
+    @IBOutlet weak var textFieldInitiative: UITextField!
+    @IBOutlet weak var textFieldHP: UITextField!
     @IBOutlet weak var buttonNextPlayer: UIBarButtonItem!
-    @IBAction func startTurnTrackerPressed(_ sender: UIBarButtonItem) {
-        currentlySelectedPlayer = players[0]
-        currentlySelectedPlayer.isPlayersTurn = true
+    @IBOutlet weak var buttonDeletePlayer: UIButton!
+    
+    @IBAction func buttonDeletePlayerPressed(_ sender: UIButton) {
+        
+    }
+    @IBAction func textFieldInitiativeChanged(_ sender: UITextField) {
+        let newInitiative = Int(sender.text!)
+        currentlySelectedPlayer.initiative = newInitiative!
         playersService.updatePlayer(player: currentlySelectedPlayer)
         reloadTableData()
     }
     
+    @IBAction func textFieldHPChanged(_ sender: UITextField) {
+        let newHP = Int(sender.text!)
+        currentlySelectedPlayer.hp = newHP!
+        playersService.updatePlayer(player: currentlySelectedPlayer)
+        reloadTableData()
+    }
+    
+    @IBAction func startTurnTrackerPressed(_ sender: UIBarButtonItem) {
+        currentInitiativePlayer = players[0]
+        currentInitiativePlayer.isPlayersTurn = true
+        playersService.updatePlayer(player: currentInitiativePlayer)
+        reloadTableData()
+    }
+    
     @IBAction func buttonNextPlayerPressed(_ sender: UIBarButtonItem) {
-        if let index = players.index(of: currentlySelectedPlayer){
+        if let index = players.index(of: currentInitiativePlayer){
             var currentPlayerIndex = Int(index)
-            currentlySelectedPlayer.isPlayersTurn = false
+            currentInitiativePlayer.isPlayersTurn = false
             if(currentPlayerIndex == (players.count - 1)) {
                 // go back to the beginning
-                currentlySelectedPlayer = players[0]
-                currentlySelectedPlayer.isPlayersTurn = true
-                playersService.updatePlayer(player: currentlySelectedPlayer)
+                currentInitiativePlayer = players[0]
+                currentInitiativePlayer.isPlayersTurn = true
+                playersService.updatePlayer(player: currentInitiativePlayer)
                 reloadTableData()
             }
             else {
                 // go back to the beginning
                 currentPlayerIndex = currentPlayerIndex + 1
-                currentlySelectedPlayer = players[currentPlayerIndex]
-                currentlySelectedPlayer.isPlayersTurn = true
-                playersService.updatePlayer(player: currentlySelectedPlayer)
+                currentInitiativePlayer = players[currentPlayerIndex]
+                currentInitiativePlayer.isPlayersTurn = true
+                playersService.updatePlayer(player: currentInitiativePlayer)
                 reloadTableData()
             }
         }
@@ -82,7 +104,8 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         playersService = AppDelegate.getPlayersService()
         players = playersService.getAllPlayers()
         print("view did loadz")
-        
+        currentlySelectedPlayer = players[0]
+        setPlayerDetail(player: currentlySelectedPlayer)
     }
     @IBAction func addPlayerButtonSelecte4d(_ sender: Any) {
         print("wtf")
@@ -114,7 +137,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return players.count
     }
     
@@ -133,14 +156,19 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let player = self.players[indexPath.row]
+        currentlySelectedPlayer = self.players[indexPath.row]
+        setPlayerDetail(player: currentlySelectedPlayer)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        // handle tap events
-//        let foodItem = foodItems[indexPath.row]
-//        print("You selected cell #\(foodItem.name)!")
-//        //self.performSegue(withIdentifier: "categoryToFoodItemsSegue", sender: self)
-//    }
-    
+    func setPlayerDetail(player: Player){
+        playerNameLabel.text = player.name
+        textFieldInitiative.text = String(player.initiative)
+        textFieldHP.text = String(player.hp)
+        if(player.isPartyMember) {
+            buttonDeletePlayer.isHidden = true
+        }
+        else {
+            buttonDeletePlayer.isHidden = false
+        }
+    }
 }

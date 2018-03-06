@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Kavivanar-Regular.ttf">
+            <string>Kavivanar-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Item 2-->
         <scene sceneID="Jq3-ew-eJl">
@@ -43,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="574" y="180"/>
         </scene>
-        <!--Initiative Tracker View Controller-->
+        <!--Axe n' Shield - Initiative Tracker-->
         <scene sceneID="iv3-f6-RYz">
             <objects>
                 <viewController id="j4l-FM-pJ6" customClass="InitiativeTrackerViewController" customModule="tracknshield" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,17 +57,127 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BDj-0I-iTP">
-                                <rect key="frame" x="5" y="69" width="714" height="650"/>
+                                <rect key="frame" x="5" y="69" width="714" height="659"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sp2-hr-BT6">
-                                <rect key="frame" x="724" y="69" width="300" height="650"/>
+                                <rect key="frame" x="724" y="69" width="300" height="659"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DnDBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hSs-cg-1mT">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="659"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xtb-fL-rG6">
+                                        <rect key="frame" x="8" y="127" width="138.5" height="129"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="42" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="rbm-iM-aSz">
+                                                <rect key="frame" x="8" y="66" width="122.5" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="bbB-qT-ww0"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="42"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="textFieldHPChanged:" destination="j4l-FM-pJ6" eventType="editingDidEnd" id="D1I-am-Sad"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="1Kp-Fu-DuX">
+                                                <rect key="frame" x="8" y="8" width="122.5" height="48"/>
+                                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="32"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1Kp-Fu-DuX" firstAttribute="leading" secondItem="Xtb-fL-rG6" secondAttribute="leading" constant="8" id="7OM-0H-zrN"/>
+                                            <constraint firstAttribute="bottom" secondItem="rbm-iM-aSz" secondAttribute="bottom" constant="8" id="EoQ-sH-Z8j"/>
+                                            <constraint firstItem="rbm-iM-aSz" firstAttribute="leading" secondItem="Xtb-fL-rG6" secondAttribute="leading" constant="8" id="Esd-AH-2Ig"/>
+                                            <constraint firstItem="rbm-iM-aSz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1Kp-Fu-DuX" secondAttribute="bottom" constant="5" id="IzU-N7-t2g"/>
+                                            <constraint firstItem="1Kp-Fu-DuX" firstAttribute="top" secondItem="Xtb-fL-rG6" secondAttribute="top" constant="8" id="YVW-UO-bqP"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Kp-Fu-DuX" secondAttribute="trailing" constant="8" id="evh-Lv-sLe"/>
+                                            <constraint firstAttribute="trailing" secondItem="rbm-iM-aSz" secondAttribute="trailing" constant="8" id="w4S-QD-ify"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wr5-Bp-6y4">
+                                        <rect key="frame" x="153.5" y="117" width="138.5" height="129"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiative:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="EDJ-Si-Zab">
+                                                <rect key="frame" x="8" y="8" width="122.5" height="47.5"/>
+                                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="32"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="42" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="jfg-ey-HXg">
+                                                <rect key="frame" x="8" y="66" width="122.5" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="ikT-k9-2cA"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="42"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="textFieldInitiativeChanged:" destination="j4l-FM-pJ6" eventType="editingDidEnd" id="Emz-fy-pmU"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="EDJ-Si-Zab" secondAttribute="trailing" constant="8" id="M9n-nr-la4"/>
+                                            <constraint firstItem="jfg-ey-HXg" firstAttribute="leading" secondItem="wr5-Bp-6y4" secondAttribute="leading" constant="8" id="ThJ-DK-bCg"/>
+                                            <constraint firstAttribute="bottom" secondItem="jfg-ey-HXg" secondAttribute="bottom" constant="8" id="XKM-I9-bZi"/>
+                                            <constraint firstItem="EDJ-Si-Zab" firstAttribute="top" secondItem="wr5-Bp-6y4" secondAttribute="top" constant="8" id="dBz-PR-7Tq"/>
+                                            <constraint firstItem="jfg-ey-HXg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EDJ-Si-Zab" secondAttribute="bottom" constant="5" id="kHi-Pf-UYn"/>
+                                            <constraint firstItem="EDJ-Si-Zab" firstAttribute="leading" secondItem="wr5-Bp-6y4" secondAttribute="leading" constant="8" id="neo-ce-mup"/>
+                                            <constraint firstAttribute="trailing" secondItem="jfg-ey-HXg" secondAttribute="trailing" constant="8" id="tZr-Tb-MCT"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Z4-xnn">
+                                        <rect key="frame" x="5" y="5" width="260" height="63"/>
+                                        <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-NV-vfO">
+                                        <rect key="frame" x="4" y="264" width="292" height="342"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qa-Nl-XBe">
+                                        <rect key="frame" x="269" y="4" width="27" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="27" id="gBb-Vv-Lps"/>
+                                            <constraint firstAttribute="height" constant="24" id="xW7-Zz-ZKA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="24"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonDeletePlayerPressed:" destination="j4l-FM-pJ6" eventType="touchUpInside" id="CVX-zP-ZWn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstItem="wr5-Bp-6y4" firstAttribute="width" secondItem="Xtb-fL-rG6" secondAttribute="width" id="3mM-4J-ZGd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y50-NV-vfO" secondAttribute="bottom" constant="4" id="AXh-3z-I6D"/>
+                                    <constraint firstItem="wr5-Bp-6y4" firstAttribute="top" secondItem="ji1-Z4-xnn" secondAttribute="bottom" constant="8" id="BXJ-Hy-dV8"/>
+                                    <constraint firstItem="hSs-cg-1mT" firstAttribute="leading" secondItem="sp2-hr-BT6" secondAttribute="leading" id="CPA-6N-QVV"/>
+                                    <constraint firstAttribute="trailing" secondItem="wr5-Bp-6y4" secondAttribute="trailing" constant="8" id="CiM-zx-mGH"/>
+                                    <constraint firstItem="ji1-Z4-xnn" firstAttribute="top" secondItem="sp2-hr-BT6" secondAttribute="top" constant="5" id="Dr9-oN-ZLW"/>
                                     <constraint firstAttribute="width" constant="300" id="H3H-VP-8ya"/>
+                                    <constraint firstItem="ji1-Z4-xnn" firstAttribute="leading" secondItem="sp2-hr-BT6" secondAttribute="leading" constant="5" id="Lse-GG-6VF"/>
+                                    <constraint firstAttribute="trailing" secondItem="hSs-cg-1mT" secondAttribute="trailing" id="Vze-Kn-xr7"/>
+                                    <constraint firstAttribute="bottom" secondItem="hSs-cg-1mT" secondAttribute="bottom" id="eic-L4-zOz"/>
+                                    <constraint firstItem="Y50-NV-vfO" firstAttribute="top" secondItem="Xtb-fL-rG6" secondAttribute="bottom" constant="4" id="k4Y-rT-3Gh"/>
+                                    <constraint firstItem="Y50-NV-vfO" firstAttribute="leading" secondItem="sp2-hr-BT6" secondAttribute="leading" constant="4" id="p13-vv-5bB"/>
+                                    <constraint firstItem="3qa-Nl-XBe" firstAttribute="top" secondItem="sp2-hr-BT6" secondAttribute="top" constant="4" id="p3W-jB-808"/>
+                                    <constraint firstItem="3qa-Nl-XBe" firstAttribute="leading" secondItem="ji1-Z4-xnn" secondAttribute="trailing" constant="4" id="p9b-lj-FUM"/>
+                                    <constraint firstItem="hSs-cg-1mT" firstAttribute="top" secondItem="sp2-hr-BT6" secondAttribute="top" id="phv-7q-nVW"/>
+                                    <constraint firstAttribute="trailing" secondItem="3qa-Nl-XBe" secondAttribute="trailing" constant="4" id="rNO-Mk-zZ1"/>
+                                    <constraint firstItem="Xtb-fL-rG6" firstAttribute="top" secondItem="ji1-Z4-xnn" secondAttribute="bottom" constant="8" id="uvu-qR-4kC"/>
+                                    <constraint firstItem="Xtb-fL-rG6" firstAttribute="leading" secondItem="sp2-hr-BT6" secondAttribute="leading" constant="8" id="vjT-00-wMQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y50-NV-vfO" secondAttribute="trailing" constant="4" id="x8u-E7-6k0"/>
                                 </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7o-Il-WgF">
-                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <rect key="frame" x="0.0" y="733" width="1024" height="35"/>
                                 <items>
                                     <barButtonItem title="Sort Initiative" id="EJE-0D-Bs3">
                                         <connections>
@@ -107,13 +222,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9S2-yU-ovu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Wgd-7E-nYV"/>
+                    <navigationItem key="navigationItem" title="Axe n' Shield - Initiative Tracker" id="Wgd-7E-nYV"/>
                     <connections>
                         <outlet property="buttonAddPlayer" destination="gMy-PX-XAa" id="aui-jO-d8C"/>
+                        <outlet property="buttonDeletePlayer" destination="3qa-Nl-XBe" id="C1Q-4m-vnw"/>
                         <outlet property="buttonNextPlayer" destination="RiV-kD-fF0" id="tfl-F4-4zo"/>
                         <outlet property="buttonStartTurnTracker" destination="nLQ-ab-oqx" id="p6a-sw-4pb"/>
-                        <outlet property="playerDetailView" destination="sp2-hr-BT6" id="Vtb-Wy-7CG"/>
+                        <outlet property="playerNameLabel" destination="ji1-Z4-xnn" id="NnF-Jh-5cQ"/>
                         <outlet property="tableViewInitiative" destination="BDj-0I-iTP" id="TKc-PD-05w"/>
+                        <outlet property="textFieldHP" destination="rbm-iM-aSz" id="y58-pw-huH"/>
+                        <outlet property="textFieldInitiative" destination="jfg-ey-HXg" id="eRU-1v-k2Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gfs-2I-ymE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,4 +342,7 @@
             <point key="canvasLocation" x="1753.7109375" y="1285.9375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DnDBackground" width="868" height="1228"/>
+    </resources>
 </document>
