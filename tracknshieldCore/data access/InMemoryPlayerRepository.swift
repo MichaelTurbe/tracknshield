@@ -52,6 +52,6 @@ class InMemoryPlayerRepository : PlayerRepositoryProtocol {
     }
     
     func deletePlayer(player: Player) -> () {
-        players.remove(at: <#T##Dictionary<String, Player>.Index#>)
+        players[player.name] = nil
     }
 }

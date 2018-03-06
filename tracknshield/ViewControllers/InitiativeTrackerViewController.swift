@@ -27,7 +27,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     
     @IBAction func buttonDeletePlayerPressed(_ sender: UIButton) {
         playersService.deletePlayer(player: currentlySelectedPlayer)
-        currentlySelectedPlayer = players[0]
+        // currentlySelectedPlayer = players[0]
         reloadTableData()
     }
     @IBAction func textFieldInitiativeChanged(_ sender: UITextField) {
@@ -89,6 +89,9 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     
     func reloadTableData() {
         DispatchQueue.main.async {
+            self.players = [Player]()
+            self.tableViewInitiative.reloadData()
+            self.players = self.playersService.getAllPlayers()
             self.tableViewInitiative.reloadData()
         }
     }
