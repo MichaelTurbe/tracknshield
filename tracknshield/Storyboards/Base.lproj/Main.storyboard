@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,6 +33,73 @@
             </objects>
             <point key="canvasLocation" x="-904" y="1582"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Xny-AY-4Yc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0O-HN-SE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ugJ-pm-6cF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I4A-Yx-488">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J22-Hr-gto">
+                                <rect key="frame" x="133" y="170" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="24"/>
+                                <state key="normal" title="Initiative Tracker"/>
+                                <connections>
+                                    <segue destination="j4l-FM-pJ6" kind="show" id="Xw8-Ih-bB3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MainImageVertical" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-gS-uCm">
+                                <rect key="frame" x="481" y="69" width="538" height="694"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Track n' Shield" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klN-qy-Lp6">
+                                <rect key="frame" x="94" y="84" width="260" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmc-fd-4BF">
+                                <rect key="frame" x="133" y="226" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="24"/>
+                                <state key="normal" title="Party Manager"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5O4-Kd-04O">
+                                <rect key="frame" x="133" y="292" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="24"/>
+                                <state key="normal" title="Encounter Builder"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xI3-D6-You">
+                                <rect key="frame" x="133" y="359" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="24"/>
+                                <state key="normal" title="DM Screen"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnL-bV-dv2">
+                                <rect key="frame" x="133" y="417" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Kavivanar-Regular" family="Kavivanar" pointSize="24"/>
+                                <state key="normal" title="Random Tables"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hhX-gS-uCm" firstAttribute="top" secondItem="aH8-lw-230" secondAttribute="top" constant="5" id="RBJ-ps-XQo"/>
+                            <constraint firstItem="aH8-lw-230" firstAttribute="bottom" secondItem="hhX-gS-uCm" secondAttribute="bottom" constant="5" id="gAG-HS-nH6"/>
+                            <constraint firstItem="hhX-gS-uCm" firstAttribute="leading" secondItem="I4A-Yx-488" secondAttribute="centerX" id="rHj-cW-wLh"/>
+                            <constraint firstItem="aH8-lw-230" firstAttribute="trailing" secondItem="hhX-gS-uCm" secondAttribute="trailing" constant="5" id="tdb-UF-gqc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aH8-lw-230"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xtu-6C-QAd"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="573.6328125" y="1050"/>
+        </scene>
         <!--Initiative-->
         <scene sceneID="dHo-BV-obx">
             <objects>
@@ -42,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="j4l-FM-pJ6" kind="relationship" relationship="rootViewController" id="lDM-Nc-6aI"/>
+                        <segue destination="ugJ-pm-6cF" kind="relationship" relationship="rootViewController" id="beD-Ml-uDQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sSn-9T-BTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -480,5 +548,6 @@
     </scenes>
     <resources>
         <image name="DnDBackground" width="868" height="1228"/>
+        <image name="MainImageVertical" width="899" height="1386"/>
     </resources>
 </document>
