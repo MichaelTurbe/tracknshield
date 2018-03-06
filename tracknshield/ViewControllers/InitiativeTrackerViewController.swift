@@ -26,7 +26,9 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     @IBOutlet weak var buttonDeletePlayer: UIButton!
     
     @IBAction func buttonDeletePlayerPressed(_ sender: UIButton) {
-        
+        playersService.deletePlayer(player: currentlySelectedPlayer)
+        currentlySelectedPlayer = players[0]
+        reloadTableData()
     }
     @IBAction func textFieldInitiativeChanged(_ sender: UITextField) {
         let newInitiative = Int(sender.text!)

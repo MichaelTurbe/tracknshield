@@ -36,4 +36,9 @@ class PlayersService {
         return sorted
     }
     
+    func deletePlayer(player: Player) -> () {
+        print("deleting player")
+        playersRepository.deletePlayer(player: player)
+    }
+    
 }

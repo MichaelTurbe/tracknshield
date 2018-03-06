@@ -50,4 +50,8 @@ class InMemoryPlayerRepository : PlayerRepositoryProtocol {
         print(player.initiative)
         players[player.name] = player
     }
+    
+    func deletePlayer(player: Player) -> () {
+        players.remove(at: <#T##Dictionary<String, Player>.Index#>)
+    }
 }
