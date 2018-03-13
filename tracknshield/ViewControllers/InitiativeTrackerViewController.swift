@@ -25,6 +25,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     @IBOutlet weak var buttonNextPlayer: UIBarButtonItem!
     @IBOutlet weak var buttonDeletePlayer: UIButton!
     
+    @IBOutlet weak var buttonInitiative: UIButton!
     @IBAction func buttonDeletePlayerPressed(_ sender: UIButton) {
         playersService.deletePlayer(player: currentlySelectedPlayer)
         // currentlySelectedPlayer = players[0]
@@ -49,6 +50,11 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
         currentInitiativePlayer.isPlayersTurn = true
         playersService.updatePlayer(player: currentInitiativePlayer)
         reloadTableData()
+    }
+    
+    @IBAction func showPopoverKeyboard(_ sender: Any) {
+        print("show that shit")
+       
     }
     
     @IBAction func buttonNextPlayerPressed(_ sender: UIBarButtonItem) {
@@ -126,8 +132,10 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let addPlayerViewController = segue.destination as! AddPlayerViewController
-        addPlayerViewController.setPlayersUpdateHandler(delegate: self)
+        if(segue.destination is AddPlayerViewController){
+            let addPlayerViewController = segue.destination as! AddPlayerViewController
+            addPlayerViewController.setPlayersUpdateHandler(delegate: self)
+        }
     }
     
     func handlePlayersUpdate() {
@@ -167,7 +175,7 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     
     func setPlayerDetail(player: Player){
         playerNameLabel.text = player.name
-        textFieldInitiative.text = String(player.initiative)
+        buttonInitiative.setTitle(String(player.initiative), for: UIControlState.normal)
         textFieldHP.text = String(player.hp)
         if(player.isPartyMember) {
             buttonDeletePlayer.isHidden = true

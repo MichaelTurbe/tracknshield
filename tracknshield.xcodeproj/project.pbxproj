@@ -23,6 +23,7 @@
 		AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */; };
 		AEDFEA802044F79E009A48B8 /* InMemoryPlayerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA7F2044F79E009A48B8 /* InMemoryPlayerRepository.swift */; };
 		AEDFEA822044F953009A48B8 /* PlayersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDFEA812044F953009A48B8 /* PlayersService.swift */; };
+		E40902B22057644E00648C48 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40902B12057644E00648C48 /* CalculatorViewController.swift */; };
 		E4D80F77204CC3F1009F40AA /* NibLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D80F76204CC3F1009F40AA /* NibLoadingView.swift */; };
 		E4D80F7A204CC530009F40AA /* PlayerDetailViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D80F78204CC530009F40AA /* PlayerDetailViewViewController.swift */; };
 		E4D80F7B204CC530009F40AA /* PlayerDetailViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4D80F79204CC530009F40AA /* PlayerDetailViewViewController.xib */; };
@@ -47,6 +48,7 @@
 		AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AEDFEA7F2044F79E009A48B8 /* InMemoryPlayerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryPlayerRepository.swift; sourceTree = "<group>"; };
 		AEDFEA812044F953009A48B8 /* PlayersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersService.swift; sourceTree = "<group>"; };
+		E40902B12057644E00648C48 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		E4D80F76204CC3F1009F40AA /* NibLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadingView.swift; sourceTree = "<group>"; };
 		E4D80F78204CC530009F40AA /* PlayerDetailViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewViewController.swift; sourceTree = "<group>"; };
 		E4D80F79204CC530009F40AA /* PlayerDetailViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerDetailViewViewController.xib; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				AEDFEA7720438BF6009A48B8 /* InitiativeTrackerViewController.swift */,
 				AE890B8520459D89007F2848 /* AddPlayerViewController.swift */,
+				E40902B12057644E00648C48 /* CalculatorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */,
 				AEDFEA7820438BF6009A48B8 /* InitiativeTrackerViewController.swift in Sources */,
 				E4D80F77204CC3F1009F40AA /* NibLoadingView.swift in Sources */,
+				E40902B22057644E00648C48 /* CalculatorViewController.swift in Sources */,
 				AEDFEA7A20438E78009A48B8 /* Player.swift in Sources */,
 				AEDFEA5C203E7899009A48B8 /* AppDelegate.swift in Sources */,
 			);
