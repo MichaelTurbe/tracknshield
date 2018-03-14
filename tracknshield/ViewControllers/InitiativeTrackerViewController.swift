@@ -26,6 +26,9 @@ class InitiativeTrackerViewController: UIViewController, UITableViewDataSource, 
     @IBOutlet weak var buttonDeletePlayer: UIButton!
     
     @IBOutlet weak var buttonInitiative: UIButton!
+    
+    
+    
     @IBAction func buttonDeletePlayerPressed(_ sender: UIButton) {
         playersService.deletePlayer(player: currentlySelectedPlayer)
         // currentlySelectedPlayer = players[0]
