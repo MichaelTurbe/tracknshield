@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE05F0C02059F00500737DDF /* NumericTextInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F0BF2059F00500737DDF /* NumericTextInputDelegate.swift */; };
+		AE05F0C22059FDBE00737DDF /* NumericTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05F0C12059FDBE00737DDF /* NumericTextInput.swift */; };
 		AE4C522E2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4C522C2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift */; };
 		AE4C522F2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE4C522D2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib */; };
 		AE4C5232204AE16700BC6974 /* NanumBrushScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE4C5231204AE16700BC6974 /* NanumBrushScript-Regular.ttf */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE05F0BF2059F00500737DDF /* NumericTextInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTextInputDelegate.swift; sourceTree = "<group>"; };
+		AE05F0C12059FDBE00737DDF /* NumericTextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTextInput.swift; sourceTree = "<group>"; };
 		AE4C522C2049F0B700BC6974 /* PlayerInitiativeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInitiativeTableViewCell.swift; sourceTree = "<group>"; };
 		AE4C522D2049F0B700BC6974 /* PlayerInitiativeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerInitiativeTableViewCell.xib; sourceTree = "<group>"; };
 		AE4C5231204AE16700BC6974 /* NanumBrushScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumBrushScript-Regular.ttf"; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				AEDFEA7920438E78009A48B8 /* Player.swift */,
+				AE05F0C12059FDBE00737DDF /* NumericTextInput.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			children = (
 				AEDFEA7D2044F67B009A48B8 /* PlayerRepositoryProtocol.swift */,
 				AE890B8720463ED9007F2848 /* PlayersUpdateDelegate.swift */,
+				AE05F0BF2059F00500737DDF /* NumericTextInputDelegate.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -274,9 +280,11 @@
 				AE890B8620459D89007F2848 /* AddPlayerViewController.swift in Sources */,
 				AEDFEA7E2044F67B009A48B8 /* PlayerRepositoryProtocol.swift in Sources */,
 				AEDFEA7820438BF6009A48B8 /* InitiativeTrackerViewController.swift in Sources */,
+				AE05F0C22059FDBE00737DDF /* NumericTextInput.swift in Sources */,
 				E4D80F77204CC3F1009F40AA /* NibLoadingView.swift in Sources */,
 				E40902B22057644E00648C48 /* CalculatorViewController.swift in Sources */,
 				AEDFEA7A20438E78009A48B8 /* Player.swift in Sources */,
+				AE05F0C02059F00500737DDF /* NumericTextInputDelegate.swift in Sources */,
 				AEDFEA5C203E7899009A48B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
